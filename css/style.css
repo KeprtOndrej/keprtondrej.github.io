@@ -127,6 +127,11 @@ nav a{
     float: right;
 }
 
+#sectionBasicInfo img:first-of-type{
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
 /********************************** Education **********************************/
 .eduContainer{
     padding-bottom: 10px;
@@ -141,9 +146,13 @@ nav a{
 
 /********************************** Coding **********************************/
 
+.codingLangContainer{
+    padding-bottom: 20px;
+}
+
 .codingLangContainer table{
     border-collapse: collapse;
-    width: 100%;
+    width: 100%;    
 }
 
 .codingLangContainer td,
@@ -154,7 +163,40 @@ nav a{
     padding-right: 15px;    
 }
 
-/********************************** CONTACT **********************************/
+/********************************** Projects **********************************/
+.projectsContainer{
+    padding-bottom: 10px;
+}
+
+.project h4 a{    
+    color: black;
+}
+
+.project h4 a:hover{
+    color: var(--lightGreen);
+}
+
+#sectionProjects .project i{
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 0 auto 0 auto;
+}
+
+
+.project{
+    border: 5px solid var(--lightGreen);
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.technologies{
+    padding: 0px;
+    margin: 0px;
+    font-style: italic;
+}
+
+/********************************** Contact **********************************/
 
 dl{
     display: grid;
@@ -259,6 +301,20 @@ footer{
         padding: 10px;
         margin-bottom: 0px;
     }
+
+    .projectsContainer{
+        padding-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .project{       
+        flex: 1 0 40%;
+        margin-bottom: 0px;
+    }
+
 
     dl{
         max-width: 50%;
