@@ -1,0 +1,316 @@
+/********************************** GLOBAL **********************************/
+
+/*http://paletton.com/#uid=12f0u0kllll1dOabhtSvpcOXo4i*/
+
+:root{
+    --pageMinWidth: 350px; /* TODO */
+    --pageMaxWidth: 12000px;
+    --lightGreen: #86A136;
+    --whiteColor: #F7FAF0;    
+    --hoverColor: #496102;
+    --darkColor: #182000;
+    --IMGborderRadius: 10%;
+}
+
+html{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    color: var(--lightGreen);
+}
+
+h1 a{
+    color: inherit;
+}
+
+a,
+a:visited,
+a:link,
+a:hover,
+a:focus{
+    text-decoration: none;
+}
+
+body{
+    min-width: var(--pageMinWidth);
+    margin: 0px;
+    padding: 0px;
+    font-size: 10pt; 
+}
+
+*{
+    box-sizing: border-box;
+}
+
+p{
+    text-align: justify;
+}
+
+section,
+header{
+    clear: both;
+    padding-top: 30px;
+}
+
+.content{
+    margin: 0 5px 0 5px;   
+    overflow: auto;
+}
+
+img{
+    width: 100%;
+    max-width: 400px;
+    border-radius: var(--IMGborderRadius);
+    padding: 20px;
+}
+
+section:nth-of-type(2n+1){
+    background-color: #ebf0ef;
+}
+
+/********************************** NAVIGATION **********************************/
+nav{     
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--lightGreen);    
+}
+
+nav a{
+    display: block;
+    padding: 10px;
+    text-align: center;
+    color: var(--whiteColor);    
+}
+
+nav a:hover{
+    background-color: var(--hoverColor);
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    list-style-type: none;
+}
+
+#menuButton{
+    font-size: 35px;
+    color: var(--whiteColor);
+    float: right;
+    margin-right: 20px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}    
+
+nav a{
+    clear: both;
+    background-color: var(--lightGreen);
+    font-size: 20px;
+}
+
+#special{
+    position: relative;
+}
+
+#special a:hover{
+    background-color: transparent;    
+}
+
+/********************************** Basic Info **********************************/
+
+#sectionBasicInfo img{
+    float: right;
+}
+
+/********************************** Education **********************************/
+.eduContainer{
+    padding-bottom: 10px;
+}
+
+.eduLevel{
+    border: 5px solid var(--lightGreen);
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/********************************** Coding **********************************/
+
+.codingLangContainer table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.codingLangContainer td,
+.codingLangContainer th{
+    text-align: center;
+    border-bottom: 1px solid var(--lightGreen);
+    padding: 5px;
+    padding-right: 15px;    
+}
+
+/********************************** CONTACT **********************************/
+
+dl{
+    display: grid;
+    grid-template-columns: 1fr 1fr;    
+}
+
+.socialSites{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* i am using IDs, because class i wasn t strong selector enough */
+#fbIcon:hover,
+#igIcon:hover,
+#ghIcon:hover{
+    color: var(--hoverColor);
+}
+
+#fbIcon,
+#igIcon,
+#ghIcon{
+    font-style: normal;
+    font-size: 100px;
+    color: var(--lightGreen);
+}
+
+/************************ Free Time *****************************/
+.freeTimeContainer{
+    padding-bottom: 10px;
+}
+
+.freeTimeCard{
+    border: 5px solid var(--lightGreen);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/************************ Contact *****************************/
+#sectionContact a{
+    color: black;
+}
+
+#sectionContact a:hover,
+#footer a:hover{
+    color: var(--hoverColor);
+}
+
+/************************ Footer *****************************/
+
+#footer{
+    background-color: var(--lightGreen);
+    height: 100px;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
+footer *:last-child{
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+footer{
+    color: var(--whiteColor);
+}
+
+#footer a{
+    color: var(--whiteColor);
+}
+
+/************************ Tablet *****************************/
+@media only screen and (min-width: 768px){
+    
+
+}
+
+/************************ PC *****************************/
+@media only screen and (min-width: 992px){  
+    #special{
+        display: none;
+    }   
+
+    nav li{
+        display: inline-block;
+        height: 100%;
+    } 
+
+    .eduContainer{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        align-items: stretch;
+    }
+    
+    .eduLevel{
+        flex: 1 0 30%;
+        padding: 10px;
+        margin-bottom: 0px;
+    }
+
+    dl{
+        max-width: 50%;
+    }
+    /************************ Free Time *****************************/
+    .freeTimeContainer{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    .freeTimeCard{
+        flex: 0 0 48%;
+        margin-bottom: 0px;
+        padding: 0px 20px 0px 20px;
+    }
+}
+
+@media only screen and (min-width: 1200px){ 
+    section,
+    header{
+        padding-top: 10px;
+    }
+    
+    nav a{
+        font-size: large;
+    }  
+
+    h1{
+        font-size: 40pt;
+    }
+
+    img{
+        max-width: 600px;
+    }
+
+    .content{
+        max-width: 1200px;
+        margin: 0 auto 0 auto;
+        font-size: 12pt;
+    }  
+}
+
+
+/*
+priklad z bootstrap
+@media (min-width: 576px) 
+@media (min-width: 768px)
+@media (min-width: 992px)
+@media (min-width: 1200px) 
+@media (min-width: 1400px)
+*/
